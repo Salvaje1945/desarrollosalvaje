@@ -1,0 +1,13 @@
+@use 'vars' as *;
+@use 'predef' as *;
+
+@media only screen and (min-width: map-get($brk_pts, "bp_03")) {
+    #contenedor {
+        #cabeza {
+            height: 100vh;
+            // .cabeza__principal--contenedor {
+            //     height: 100vh;
+            // }
+        }
+    }
+}

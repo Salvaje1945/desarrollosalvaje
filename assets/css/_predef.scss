@@ -1,0 +1,87 @@
+@use 'vars' as *;
+
+// Cajas flexbox
+
+.flex-1 {
+    display: map-get($disp, "flex");
+    flex-flow: map-get($flow, "flow_02");
+    width: map-get($per_cent, "100");
+    justify-content: map-get($pos, "spe_bet");
+    align-items: map-get($pos, "ctr");
+}
+
+// .flex-1,
+// .flex-2,
+// .flex-3,
+// .flex-4,
+// .flex-5,
+// .flex-6,
+// .flex-7 {
+//     display: map-get($disp, "flex");
+//     flex-flow: map-get($flow, "flow_01");
+// }
+
+// .flex-1,
+// .flex-2,
+// .flex-3,
+// .flex-4,
+// .flex-7 {
+//     width: map-get($per_cent, "100");
+// }
+
+// .flex-1,
+// .flex-2 {
+//     justify-content: map-get($pos, "spe_aro");
+// }
+
+// .flex-1,
+// .flex-5 {
+//     align-items: map-get($pos, "ctr");
+// }
+
+// .flex-6,
+// .flex-7 {
+//     align-items: map-get($pos, "f_str");
+// }
+
+// .flex-3,
+// .flex-7 {
+//     justify-content: map-get($pos, "spe_eve");
+// }
+
+// .flex-4 {
+//     justify-content: map-get($pos, "f_str");
+// }
+
+// .flex-5,
+// .flex-6 {
+//     justify-content: map-get($pos, "spe_bet");
+// }
+
+// @media only screen and (min-width: map-get($brk_pts, "bp_01")) {
+//     .flex-4 {
+//         flex-flow: map-get($flow, "flow_02");
+//         justify-content: map-get($pos, "ctr");
+//     }
+// }
+
+// @media only screen and (min-width: map-get($brk_pts, "bp_03")) {
+//     .flex-1 {
+//         justify-content: map-get($pos, "spe_eve");
+//     }
+
+//     .flex-6 {
+//         flex-flow: map-get($flow, "flow_02");
+//     }
+
+//     .flex-7 {
+//         width: map-get($per_cent, "100") - 10;
+//     }
+// }
+
+// @media only screen and (min-width: map-get($wth_res, "dkp_01")) {
+//     .flex-7 {
+//         justify-content: map-get($pos, "spe_bet");
+//         width: map-get($per_cent, "100") - 10;
+//     }
+// }

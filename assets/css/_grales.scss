@@ -1,0 +1,72 @@
+@use 'vars' as *;
+
+html,
+:root {
+    font-size: $root_fsize;
+}
+
+* {
+    padding: map-get($num_int, "0");
+    margin: map-get($num_int, "0");
+    outline: map-get($num_int, "0");
+    border: map-get($num_int, "0");
+    font-style: map-get($glob_kw, "inh");
+    font-weight: map-get($glob_kw, "inh");
+    font-family: map-get($glob_kw, "inh");
+    margin-block-start: map-get($num_int, "0");
+    margin-block-end: map-get($num_int, "0");
+    margin-inline-start: map-get($num_int, "0");
+    margin-inline-end: map-get($num_int, "0");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    line-height: 0.8;
+}
+
+.cabe1 {
+    font-family: $fam_01;
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    font-weight: 650;
+}
+
+.cabe2 {
+    font-family: $fam_02;
+    color: #fff;
+    font-size: 1.75rem;
+    letter-spacing: 0.07rem;
+}
+
+#contenedor {
+    display: map-get($disp, "grd");
+    grid-template-columns: map-get($per_cent, "100");
+    grid-template-rows: repeat(3, map-get($glob_kw, "auto"));
+    grid-template-areas:
+
+        "cabeza"
+        "contenido"
+        "pieses"
+
+    ;
+
+    #cabeza {
+        grid-area: cabeza;
+    }
+
+    #contenido {
+        grid-area: contenido;
+    }
+
+    #pieses {
+        grid-area: pieses;
+    }
+}

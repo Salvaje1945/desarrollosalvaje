@@ -1,0 +1,137 @@
+@use 'vars' as *;
+@use 'predef' as *;
+
+#contenedor {
+    #cabeza {
+        width: 100%;
+        min-height: 614px;
+        background-color: #000;
+        background-image: url(../img/fondo_cabecera_buho.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
+        .cabeza__principal--contenedor {
+            @extend .flex-1;
+
+            .cabeza__principal--logo {
+                display: inline-block;
+                min-height: 80px;
+                margin-top: 10px;
+
+                .logo__buho,
+                .logo__cabecera {
+                    display: inline-block;
+                }
+
+                .logo__buho {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
+
+            .cabeza__principal--menu--resp {
+                display: map-get($disp, "blk_lin");
+                margin-right: 35px;
+                margin-top: 30px;
+
+                .hamburguesa,
+                .cerrar {
+                    color: map-get($color, "rojo");
+                    -webkit-text-stroke: 1px #000;
+                }
+            
+                .cerrar {
+                    // text-align: map-get($pos, "ctr");
+                    display: map-get($glob_kw, "none");
+                    font-size: 3rem;
+                    font-weight: bold;
+                    margin-right: 3px;
+                }
+            
+                .hamburguesa,
+                .cerrar {
+                    cursor: $cursor;
+                }
+
+                .hamburguesa {
+                    display: map-get($disp, "blk");
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                }
+            
+                // .cerrar {
+                //     width: map-get($abs_lng, "25px") + map-get($abs_lng, "3px");
+                //     height: map-get($abs_lng, "10px") * 3;
+                // }
+
+                #check {
+                    display: map-get($glob_kw, "none");
+                }
+
+                #check:checked~.hamburguesa {
+                    display: map-get($glob_kw, "none");
+                }
+            
+                #check:checked~ul {
+                    right: map-get($num_int, "0");
+                    padding-left: map-get($num_int, "0");
+                }
+
+                #check:checked~.cerrar {
+                    display: map-get($disp, "blk");
+                }
+            
+                ul {
+                    font-family: $fam_03;
+                    width: 100%;
+                    position: map-get($pos, "fix");
+                    top: 110px;
+                    right: - map-get($per_cent, "100");
+                    // z-index: map-get($num_int, "100") * 10 - map-get($num_int, "1");
+                    list-style: map-get($glob_kw, "none");
+                    background-color: rgba(18,18,18,0.93);
+                    // opacity: 0.9;
+                    transition: map-get($times, "m_seg");
+                    height: 505px;
+            
+                    li {
+                        padding: 15px 0; 
+                        font-size: 1.35rem;
+                        font-weight: 590;
+                        text-transform: $mayusc;
+                        text-align: map-get($pos, "ctr");
+                        display: map-get($disp, "blk");
+                        border-bottom: 1px solid #666;
+                        letter-spacing: 0.1rem;
+                     
+                        a {
+                            color: map-get($color, "rojo");
+            
+                            &:hover {
+                                color: map-get($color, "gris_04");
+                            }
+                        }
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        span {
+                            display: block;
+                            margin-top: 15px;
+                            font-size: 2.125rem;
+
+                            i {
+                                margin: 0 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

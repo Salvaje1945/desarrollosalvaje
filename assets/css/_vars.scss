@@ -1,0 +1,241 @@
+// ***GENERALES***
+// Tamaño fuente raíz
+
+$root_fsize: 16px !important;
+
+// 01 - ***VALORES GENERALES***
+// 01:A(1) - ***NÚMEROS GENÉRICOS*** 
+
+$num_int: (
+    "0": 0,
+    "1": 1,
+    "3": 3,
+    "5": 5,
+    "7": 7,
+    "10": 10,
+    "25": 25,
+    "50": 50,
+    "100": 100,
+);
+
+$num_dec: (
+    "0.1": 0.1,
+    "0.3": 0.3,
+    "0.5": 0.5,
+    "0.7": 0.7,
+    "1.2": 1.2,
+    "1.3": 1.3,
+    "1.35": 1.35,
+    "1.45": 1.45,
+    "1.5": 1.5,
+    "1.7": 1.7,
+);
+
+// 01:A(2) ***PORCENTAJES***
+
+$per_cent: (
+    "0": 0%,
+    "1": 1%,
+    "3": 3%,
+    "5": 5%,
+    "7": 7%,
+    "10": 10%,
+    "25": 25%,
+    "50": 50%,
+    "100": 100%,
+);
+
+// 01:A(3) ***DIMENSIONES***
+// 01:A(3-a) - Ángulos y tiempo
+
+$angles: (
+    "0°": 0deg,
+    "1°": 1deg,
+    "3°": 3deg,
+    "5°": 5deg,
+    "7°": 7deg,
+    "10°": 10deg,
+    "25°": 25deg,
+    "50°": 50deg,
+    "100°": 100deg,    
+);
+
+$times: (
+    "m_seg": 0.5s,
+    "seg": 1s,
+);
+
+// 01:A(3-b) - Longitudes (absolutas y relativas)
+
+$abs_lng: (
+    "0px": 0px,
+    "1px": 1px,
+    "3px": 3px,
+    "5px": 5px,
+    "7px": 7px,
+    "10px": 10px,
+    "25px": 25px,
+    "50px": 50px,
+    "100px": 100px,
+);
+
+$rel_lng: (
+    "0.8": 0.8rem,
+    "0.875": 0.875rem,
+    "0.9": 0.9rem,
+    "1": 1rem,
+    "1.031": 1.031rem,
+    "1.125": 1.125rem,
+    "1.25": 1.25rem,
+    "1.30": 1.30rem,
+    "1.35": 1.35rem,
+    "1.40": 1.40rem,
+    "1.45": 1.45rem,
+    "1.5": 1.5rem,
+    "1.563": 1.563rem,
+    "1.650": 1.650rem,
+    "1.875": 1.875rem,
+    "2": 2rem,
+    "2.5": 2.5rem,
+    "3": 3rem,
+    "3.125": 3.125rem,
+    "3.5": 3.5rem,
+    "4": 4rem,
+); 
+
+// 01:A(3-c) - Resoluciones
+
+$wth_res: (
+    "mob_01": 325px,
+    "mob_02": 375px,
+    "pst_tbl": 922px,
+    "dkp_01": 1280px,
+    "dkp_02": 1330px,
+    "dkp_03": 1400px,
+);
+
+$hgt_res: (
+    "bkp_01": 359px,
+    "bkp_02": 360px,
+    "bkp_03": 450px,
+    "bkp_04": 599px,
+    "bkp_05": 655px,
+);
+
+$brk_pts: (
+    "bp_01": 960px,
+    "bp_02": 1023px,
+    "bp_03": 1024px,
+    "bp_04": 1052px,
+    "bp_05": 1053px,
+    "bp_06": 1168px,
+);
+
+// 01:B - ***COLORES*** 
+
+$color: (
+    "trans": transparent,
+    "negro": #000,
+    "gris_01": #333,
+    "gris_02": #444,
+    "gris_03": #666,
+    "gris_04": #aaa,
+    "gris_05": #ccc,
+    "gris_06": #ededed,
+    "blanco": #fff,
+    "beige": #E8CEAA,
+    "azul": #2C82B8,
+    "rosa": #FF99FF,
+    "rosa_02": #f4b9b9,
+    "rosa_03": #fdbdaf,
+    "rojo": #ff0000,
+);
+
+// 01:C - ***VALORES DE POSICIÓN***
+
+$pos: (
+    // Posiciones 2D
+    "ctr": center,
+    "lft": left,
+    "rgt": right,
+    "top": top,
+    "bttm": bottom,
+    "mdl": middle,
+    // Específica para textgo
+    "jtf": justify,
+    // Para cajas flexibles
+    "str": start,
+    "f_str": flex-start,
+    "end": end,
+    "f_end": flex-end,
+    "spe_aro": space-around,
+    "spe_bet": space-between,
+    "spe_eve": space-evenly,
+    // Posiciones de flujo
+    "abs": absolute,
+    "rel": relative,
+    "fix": fixed,
+);
+
+// 01:D - ***PALABRAS CLAVE GLOBALES***
+
+$glob_kw: (
+    "auto": auto,
+    "none": none,
+    "norm": normal,
+    "init": initial,
+    "inh": inherit,
+    "ust": unset,
+);
+
+// 02 - ***VALORES PARA ELEMENTOS***
+// 02:A - ***DESPLIEGUE***
+
+$disp: (
+    "blk": block,
+    "lin": inline,
+    "blk_lin": inline-block,
+    "grd": grid,
+    "flex": flex,
+    "cnt": contents,
+    "tbl": table,
+    "tbl_cell": table-cell,  
+);
+
+// 02:B - ***FLUJO DE CAJAS FLEXIBLES***
+
+$flow: (
+    "flow_01": row wrap,
+    "flow_02": row nowrap,
+    "flow_03": column wrap,
+    "flow_04": column nowrap,
+);
+
+// 02:C - ***VISIBILIDAD***
+
+$vis: (
+    "vis": visible,
+    "no_vis": hidden,
+    "coll": collapse,
+);
+
+// 03 - ***VALORES PARA FUENTES/TIPOGRAFÍAS***
+// 03:A - ***FAMILIAS***
+
+$fam_01: 'Bebas Neue', cursive;
+$fam_02: 'Pathway Gothic One', sans-serif;
+$fam_03: 'Urbanist', sans-serif;
+$fam_04: 'Helvetica', 'Segoe UI', 'Tahoma', Geneva, 'Verdana', 'sans-serif';
+
+// 03:B - ***OTRAS***
+
+$mayusc: uppercase;
+$ital: italic;
+$udr_lne: underline;
+
+// 04 - ***OTRAS***
+
+$solid: solid;
+$cursor: pointer;
+$vh_4: 4vh;
+$vh_100: 100vh;
