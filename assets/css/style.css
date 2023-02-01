@@ -262,7 +262,7 @@ h1 {
     height: 100vh;
   }
   #contenedor #cabeza .cabeza__principal--contenedor {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
     padding-bottom: 15px;
     position: fixed;
   }
@@ -280,16 +280,27 @@ h1 {
 }
 @media only screen and (min-width: 1280px) {
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo {
-    margin: 10px 125px 0 0;
+    margin: 10px 4vw 0 0;
   }
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo .logo__buho {
-    margin: 0;
+    margin: 0 5px 0 0;
   }
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu {
     margin: 15px 0 0 0;
   }
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--promo {
     display: inline-block;
-    margin-left: 125px;
+    margin-left: 4vw;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo {
+    margin-right: 6vw;
+  }
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu ul li {
+    margin: 0 10px;
+  }
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--promo {
+    margin-left: 6vw;
   }
 }/*# sourceMappingURL=style.css.map */
