@@ -65,13 +65,69 @@ h1 {
 
 .flex-1, #contenedor #cabeza .cabeza__principal--contenedor {
   display: flex;
-  flex-flow: row nowrap;
   width: 100%;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
 
+@media only screen and (min-width: 1280px) {
+  .flex-1, #contenedor #cabeza .cabeza__principal--contenedor {
+    justify-content: space-evenly;
+    min-width: 1280px;
+  }
+}
+.btn_01, #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--promo .promo__btn {
+  font-family: "Pathway Gothic One", sans-serif;
+  display: block;
+  position: relative;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  border: 3px solid #ff0000;
+  border-radius: 27px;
+  transition: 0.5s;
+  padding: 7px 15px 9px;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 175px;
+  -webkit-animation: btn1 7s infinite;
+          animation: btn1 7s infinite;
+}
+@-webkit-keyframes btn1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes btn1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.btn_01:hover, #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--promo .promo__btn:hover {
+  transition: 0.5s;
+  border: 3px solid #fff;
+  color: #ff0000;
+  font-weight: bold;
+}
+
 #contenedor #cabeza {
+  display: block;
   width: 100%;
   min-height: 614px;
   background-color: #000;
@@ -91,8 +147,34 @@ h1 {
   display: inline-block;
 }
 #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo .logo__buho {
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: 0 10px;
+}
+#contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu {
+  display: none;
+}
+#contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu ul {
+  font-family: "Urbanist", sans-serif;
+  width: 100%;
+  list-style: none;
+  transition: 1s;
+  text-align: center;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu ul li a {
+  color: #ff0000;
+  border-bottom: 3px solid rgba(255, 0, 0, 0);
+  transition: all 0.5s;
+}
+#contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu ul li a:hover {
+  color: #ededed;
+  border-bottom: 3px solid rgb(255, 0, 0);
+  transition: all 0.5s;
 }
 #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu--resp {
   display: inline-block;
@@ -170,9 +252,44 @@ h1 {
 #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu--resp ul li span i {
   margin: 0 25px;
 }
-
+#contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--promo {
+  display: none;
+  min-width: 253px;
+  margin-top: 10px;
+}
 @media only screen and (min-width: 1024px) {
   #contenedor #cabeza {
     height: 100vh;
+  }
+  #contenedor #cabeza .cabeza__principal--contenedor {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 15px;
+    position: fixed;
+  }
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo {
+    margin-left: 15px;
+  }
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu--resp {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo {
+    margin: 10px 125px 0 0;
+  }
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo .logo__buho {
+    margin: 0;
+  }
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu {
+    margin: 15px 0 0 0;
+  }
+  #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--promo {
+    display: inline-block;
+    margin-left: 125px;
   }
 }/*# sourceMappingURL=style.css.map */

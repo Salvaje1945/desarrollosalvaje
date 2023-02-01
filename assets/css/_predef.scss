@@ -4,11 +4,61 @@
 
 .flex-1 {
     display: map-get($disp, "flex");
-    flex-flow: map-get($flow, "flow_02");
     width: map-get($per_cent, "100");
+    flex-flow: map-get($flow, "flow_02");
     justify-content: map-get($pos, "spe_bet");
     align-items: map-get($pos, "ctr");
 }
+
+@media only screen and (min-width: map-get($wth_res, "dkp_01")) {
+    .flex-1 {
+        justify-content: map-get($pos, "spe_eve");
+        // width: map-get($per_cent, "100") - 5;
+        min-width: 1280px;
+    }
+}
+
+// Botones
+
+.btn_01 {
+    font-family: $fam_02;
+    display: block;
+    position: relative;
+    color: map-get($color, "blanco");
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: $mayusc;
+    letter-spacing: 0.1rem;
+    text-align: map-get($pos, "ctr");
+    // background-color: map-get($color, "rojo");
+    border: map-get($abs_lng, "3px") $solid map-get($color, "rojo");
+    border-radius: 27px;
+    transition: map-get($times, "m_seg");
+    padding: 7px 15px 9px;
+    margin: 0 auto;
+    cursor: $cursor;
+    width: 175px;
+    animation: btn1 7s infinite;
+
+    @keyframes btn1 {
+        0%{transform: scale(1);}
+        50%{transform: scale(1.2);}
+        100%{transform: scale(1);}
+    }
+
+    &:hover {
+        transition: map-get($times, "m_seg");
+        border: map-get($abs_lng, "3px") $solid map-get($color, "blanco");
+        color: map-get($color, "rojo");
+        font-weight: bold;
+    }
+}
+
+// @media only screen and (min-width: map-get($brk_pts, "bp_03")) {
+//     .flex-1 {
+//         justify-content: map-get($pos, "spe_eve");
+//     }
+// }
 
 // .flex-1,
 // .flex-2,

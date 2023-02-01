@@ -5,9 +5,50 @@
     #contenedor {
         #cabeza {
             height: 100vh;
-            // .cabeza__principal--contenedor {
-            //     height: 100vh;
-            // }
+
+            .cabeza__principal--contenedor {
+                background-color: rgba(0,0,0,0.7);
+                padding-bottom: 15px;
+                position: fixed;
+
+                .cabeza__principal--logo {
+                    margin-left: 15px;
+                }
+
+                .cabeza__principal--menu {
+                    display: inline-block;
+                    margin-right: 20px;
+                    margin-top: 15px;
+                }
+                
+                .cabeza__principal--menu--resp {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($wth_res, "dkp_01")) {
+    #contenedor {
+        #cabeza {
+            .cabeza__principal--contenedor {
+                .cabeza__principal--logo {
+                    margin: 10px 125px 0 0;
+
+                    .logo__buho {
+                        margin: 0;
+                    }
+                }
+
+                .cabeza__principal--menu {
+                    margin: 15px 0 0 0;
+                }
+                .cabeza__principal--promo {
+                    display: inline-block;
+                    margin-left: 125px;
+                }
+            }
         }
     }
 }

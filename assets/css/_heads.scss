@@ -3,6 +3,7 @@
 
 #contenedor {
     #cabeza {
+        display: block;
         width: 100%;
         min-height: 614px;
         background-color: #000;
@@ -26,8 +27,45 @@
                 }
 
                 .logo__buho {
-                    margin-right: 10px;
-                    margin-left: 10px;
+                    margin: 0 10px;
+                }
+            }
+
+            .cabeza__principal--menu {
+                display: none;
+
+                ul {
+                    font-family: $fam_03;
+                    width: 100%;
+                    list-style: map-get($glob_kw, "none");
+                    transition: 1s;
+                    text-align: center;
+                    font-size: 1.25rem;
+                    text-transform: $mayusc;
+                    font-weight: bold;
+
+
+                    li {
+                        display: inline-block;
+                        margin: 0 5px;
+
+                        // &:hover {
+                        //     border-bottom: 2px solid map-get($color, "rojo");
+                        //     transition: 0.5s; rgba(255,0,0,0)
+                        // }
+
+                        a {
+                            color: map-get($color, "rojo");
+                            border-bottom: 3px solid rgba(255,0,0,0);
+                            transition: all 0.5s;
+
+                            &:hover {
+                                color: map-get($color, "gris_06");
+                                border-bottom: 3px solid rgba(255,0,0,1);
+                                transition: all 0.5s;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -60,11 +98,6 @@
                     font-size: 2.5rem;
                     font-weight: bold;
                 }
-            
-                // .cerrar {
-                //     width: map-get($abs_lng, "25px") + map-get($abs_lng, "3px");
-                //     height: map-get($abs_lng, "10px") * 3;
-                // }
 
                 #check {
                     display: map-get($glob_kw, "none");
@@ -128,6 +161,16 @@
                             }
                         }
                     }
+                }
+            }
+
+            .cabeza__principal--promo {
+                display: none;
+                min-width: 253px;
+                margin-top: 10px;
+
+                .promo__btn {
+                    @extend .btn_01;
                 }
             }
         }
