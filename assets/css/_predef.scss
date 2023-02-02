@@ -31,7 +31,7 @@
     letter-spacing: 0.1rem;
     text-align: map-get($pos, "ctr");
     // background-color: map-get($color, "rojo");
-    border: map-get($abs_lng, "3px") $solid map-get($color, "rojo");
+    border: map-get($abs_lng, "3px") $solid map-get($color, "rojo_01");
     border-radius: 27px;
     transition: map-get($times, "m_seg");
     padding: 7px 15px 9px;
@@ -49,7 +49,7 @@
     &:hover {
         transition: map-get($times, "m_seg");
         border: map-get($abs_lng, "3px") $solid map-get($color, "blanco");
-        color: map-get($color, "rojo");
+        color: map-get($color, "rojo_01");
         font-weight: bold;
     }
 }

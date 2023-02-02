@@ -25,6 +25,31 @@
                     display: none;
                 }
             }
+
+            .cabeza__carousel--contenedor {
+                width: 90vw;
+                margin-left: 3vw;
+                margin-top: 35vh;
+
+                .carousel-item {
+                    div {
+                        width:70vw;
+
+                        h2 {
+                            margin-bottom: 25px;
+                            font-size: 5.5rem;
+                            line-height: 69px;
+                            text-shadow: 3px 3px #000;
+                        }
+
+                        p {
+                            font-size: 2.5rem;
+                            line-height: 52px;
+                            text-shadow: 3px 3px #000;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -72,6 +97,29 @@
 
                 .cabeza__principal--promo {
                     margin-left: 6vw;
+                }
+            }
+
+            .cabeza__carousel--contenedor {
+                width: 90vw;
+                margin-left: 3vw;
+                margin-top: 35vh;
+
+                .carousel-item {
+                    div {
+                        width:50vw;
+
+                        h2 {
+                            padding-top: 11px;
+                            margin-bottom: 35px;
+                            font-size: 6rem;
+                        }
+
+                        p {
+                            font-size: 3rem;
+                            line-height: 56px;
+                        }
+                    }
                 }
             }
         }

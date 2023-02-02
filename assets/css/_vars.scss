@@ -3,6 +3,12 @@
 
 $root_fsize: 16px !important;
 
+// $transition-base:             all .2s ease-in-out !default;
+$enable-transitions:          true !default;
+$enable-reduced-motion:       true !default;
+$carousel-transition: .5s;
+
+
 // 01 - ***VALORES GENERALES***
 // 01:A(1) - ***NÚMEROS GENÉRICOS*** 
 
@@ -142,13 +148,21 @@ $color: (
     "gris_04": #aaa,
     "gris_05": #ccc,
     "gris_06": #ededed,
+    "gris_07": #cdcdcd,
+    "gris_08": #cacaca,
     "blanco": #fff,
-    "beige": #E8CEAA,
-    "azul": #2C82B8,
-    "rosa": #FF99FF,
-    "rosa_02": #f4b9b9,
-    "rosa_03": #fdbdaf,
-    "rojo": #ff0000,
+    "rojo_01": #ff0000,
+    "rojo_02": #cb0000,
+    "naranja_01": #ff7301,
+    "naranja_02": #fb5504,
+    "naranja_03": #f62a00,
+    "verde_01": #258039,
+    "verde_02": #a2c523,
+    "azul_01": #375e97,
+    "azul_02": #1e434c,
+    "celeste_01": #4cb5f5,
+    "celeste_02": #1995ad,
+
 );
 
 // 01:C - ***VALORES DE POSICIÓN***
