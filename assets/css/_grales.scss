@@ -19,6 +19,12 @@ html,
     margin-inline-end: map-get($num_int, "0");
 }
 
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
@@ -37,7 +43,6 @@ h2 {
 }
 
 p {
-    font-family: $fam_02;
     font-size: 1.5rem;
     color: #ccc;
 }

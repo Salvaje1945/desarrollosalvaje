@@ -2,18 +2,43 @@
 
 // Cajas flexbox
 
-.flex-1 {
+.flex-1,
+.flex-2,
+.flex-2-2 {
     display: map-get($disp, "flex");
     width: map-get($per_cent, "100");
+}
+
+.flex-1 {
     flex-flow: map-get($flow, "flow_02");
     justify-content: map-get($pos, "spe_bet");
     align-items: map-get($pos, "ctr");
 }
 
+.flex-2 {
+    flex-flow: map-get($flow, "flow_01");
+}
+
+.flex-2-2 {
+    flex-flow: column-reverse wrap;
+}
+
+.flex-2,
+.flex-2-2 {
+    justify-content: map-get($pos, "f_str");
+}
+
+@media only screen and (min-width: map-get($brk_pts, "bp_01")) {
+    .flex-2,
+    .flex-2-2 {
+        flex-flow: map-get($flow, "flow_02");
+        justify-content: map-get($pos, "ctr");
+    }
+}
+
 @media only screen and (min-width: map-get($wth_res, "dkp_01")) {
     .flex-1 {
         justify-content: map-get($pos, "spe_eve");
-        // width: map-get($per_cent, "100") - 5;
         min-width: 1280px;
     }
 }
@@ -34,10 +59,10 @@
     border: map-get($abs_lng, "3px") $solid map-get($color, "rojo_01");
     border-radius: 27px;
     transition: map-get($times, "m_seg");
-    padding: 7px 15px 9px;
+    padding: 7px 5px 9px;
     margin: 0 auto;
     cursor: $cursor;
-    width: 175px;
+    width: 185px;
     animation: btn1 7s infinite;
 
     @keyframes btn1 {

@@ -5,6 +5,7 @@
     #cabeza {
         display: block;
         width: 100%;
+        min-width: 375px;
         min-height: 614px;
         background-color: #000;
         background-image: url(../img/fondo_cabecera_buho.jpg);
@@ -193,7 +194,7 @@
             }
               
             .carousel.pointer-event {
-                touch-action: pan-y;
+                touch-action: none;
             }
               
             .carousel-inner {
@@ -270,5 +271,3 @@
         }
     }
 }
-
-

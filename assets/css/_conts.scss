@@ -1,0 +1,67 @@
+@use 'vars' as *;
+@use 'predef' as *;
+
+#contenedor {
+    #contenido {
+        width: 100%;
+        min-width: 375px;
+        
+
+        .contenido__seccion--sobremi {
+            background-color: #fff;
+            width: 100%;
+            display: block;
+
+            .contenido__articulo--sobremi {
+                height: 100%;
+
+                .contenido__sobremi--txt {
+                    padding: map-get($abs_lng, "10px");
+                    background-color: #fff;
+                    width: map-get($per_cent, "100");
+                    min-width: 375px;
+                    height: 100%;
+                    min-height: 250px;
+
+                    h3 {
+                        font-family: $fam_01;
+                        font-size: 2rem;
+                        color: #333;
+                        text-align: map-get($pos, "ctr");
+                        margin-bottom: map-get($abs_lng, "5px") * 3;
+                    }
+
+                    p {
+                        font-family: $fam_04;
+                        font-size: 1rem;
+                        color: #000;
+                        text-align: map-get($pos, "ctr");
+                        // font-size: map-get($rel_lng, "1.125");
+                    }
+                }
+
+                .contenido__sobremi--img {
+                    width: 100%;
+                    min-width: 375px;
+                    height: 100%;
+                    min-height: 250px;
+                    background-size: cover;
+                    background-position: center center;
+                }
+            
+
+                .sobremi_img_01 {
+                    background-image: url(../img/perfil_profesional.jpg);
+                }
+
+                .sobremi_img_02 {
+                    background-image: url(../img/mi_historia.jpg);
+                }
+
+                .sobremi_img_03 {
+                    background-image: url(../img/mis_habilidades.jpg);
+                }
+            }
+        }
+    }
+}
