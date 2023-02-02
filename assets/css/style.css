@@ -283,7 +283,7 @@ p {
   position: relative;
 }
 #contenedor #cabeza .cabeza__carousel--contenedor .carousel.pointer-event {
-  touch-action: none;
+  touch-action: pan-y;
 }
 #contenedor #cabeza .cabeza__carousel--contenedor .carousel-inner {
   position: relative;
