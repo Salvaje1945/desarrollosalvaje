@@ -5,18 +5,74 @@
     #contenido {
         width: 100%;
         min-width: 375px;
+
+        #contenido__subir {
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            position: fixed;
+            bottom: 15px;
+            right: -100%;
+            background-color: #ff0000;
+            border: 3px solid #000;
+            transition: 0.5s;
+            padding: 6px 5px 5px 6px;
+
+            a {
+                color: #666;
+                font-size: 2rem;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
         
 
         .contenido__seccion--sobremi {
             background-color: #fff;
             width: 100%;
             display: block;
+            box-sizing: border-box;
+
+            .contenido__seccion--sobremi_margen {
+                height: 30px;
+            }
+
+            h2 {
+                font-size: 3.5rem;
+                text-align: center;
+                color: #333;
+                margin: 0 0 35px;
+                line-height: 40px;
+                padding-top: 7px;
+                
+            }
+
+            p {
+                font-family: $fam_02;
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 50px;
+                color: #000;
+                line-height: 30px;
+
+                span {
+                    font-weight: bold;
+                }
+            }
 
             .contenido__articulo--sobremi {
                 height: 100%;
 
+                .contenido__sobremi--txt,
+                .contenido__sobremi--img {
+                    box-sizing: border-box;
+                }
+
                 .contenido__sobremi--txt {
-                    padding: map-get($abs_lng, "10px");
+                    padding: 15px;
                     background-color: #fff;
                     width: map-get($per_cent, "100");
                     min-width: 375px;
@@ -28,15 +84,18 @@
                         font-size: 2rem;
                         color: #333;
                         text-align: map-get($pos, "ctr");
-                        margin-bottom: map-get($abs_lng, "5px") * 3;
+                        margin: 10px 0 15px;
+                        line-height: 27px;
                     }
 
                     p {
                         font-family: $fam_04;
-                        font-size: 1rem;
+                        font-size: 1.25rem;
                         color: #000;
-                        text-align: map-get($pos, "ctr");
-                        // font-size: map-get($rel_lng, "1.125");
+                        text-align: justify;
+                        line-height: 27px;
+                        margin: 0 0 10px;
+                        font-weight: normal;
                     }
                 }
 

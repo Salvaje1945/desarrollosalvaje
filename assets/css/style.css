@@ -4,6 +4,7 @@
 html,
 :root {
   font-size: 16px !important;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -24,12 +25,6 @@ html,
           margin-inline-end: 0;
 }
 
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
 a {
   text-decoration: none;
 }
@@ -40,7 +35,6 @@ h1 {
 
 h2 {
   font-family: "Bebas Neue", cursive;
-  font-size: 1.5rem;
 }
 
 p {
@@ -126,24 +120,24 @@ p {
   font-size: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1px;
   text-align: center;
   border: 3px solid #ff0000;
   border-radius: 27px;
   transition: 0.5s;
-  padding: 7px 5px 9px;
+  padding: 7px 7px 7px;
   margin: 0 auto;
   cursor: pointer;
-  width: 185px;
-  -webkit-animation: btn1 7s infinite;
-          animation: btn1 7s infinite;
+  width: 175px;
+  -webkit-animation: btn1 3s infinite;
+          animation: btn1 3s infinite;
 }
 @-webkit-keyframes btn1 {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
@@ -154,7 +148,7 @@ p {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
@@ -181,7 +175,6 @@ p {
 }
 #contenedor #cabeza .cabeza__principal--contenedor {
   background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
   padding-bottom: 16px;
   z-index: 999;
 }
@@ -233,15 +226,12 @@ p {
 #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu--resp .cerrar {
   color: #fff;
   font-weight: bold;
+  cursor: pointer;
 }
 #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu--resp .cerrar {
   display: none;
   font-size: 3rem;
   margin-right: 3px;
-}
-#contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu--resp .hamburguesa,
-#contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu--resp .cerrar {
-  cursor: pointer;
 }
 #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu--resp .hamburguesa {
   display: block;
@@ -267,7 +257,7 @@ p {
   top: 110px;
   right: -100%;
   list-style: none;
-  background-color: rgba(18, 18, 18, 0.93);
+  background-color: rgba(18, 18, 18, 0.95);
   transition: 0.5s;
   height: 505px;
   z-index: 999;
@@ -275,7 +265,7 @@ p {
 #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu--resp ul li {
   padding: 15px 0;
   font-size: 1.35rem;
-  font-weight: 590;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   display: block;
@@ -308,7 +298,7 @@ p {
   display: block;
   width: 90vw;
   margin-left: 5vw;
-  margin-top: 20vh;
+  margin-top: 5vh;
 }
 #contenedor #cabeza .cabeza__carousel--contenedor .carousel {
   position: relative;
@@ -376,16 +366,63 @@ p {
   width: 100%;
   min-width: 375px;
 }
+#contenedor #contenido #contenido__subir {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  position: fixed;
+  bottom: 15px;
+  right: -100%;
+  background-color: #ff0000;
+  border: 3px solid #000;
+  transition: 0.5s;
+  padding: 6px 5px 5px 6px;
+}
+#contenedor #contenido #contenido__subir a {
+  color: #666;
+  font-size: 2rem;
+}
+#contenedor #contenido #contenido__subir a:hover {
+  color: #000;
+}
 #contenedor #contenido .contenido__seccion--sobremi {
   background-color: #fff;
   width: 100%;
   display: block;
+  box-sizing: border-box;
+}
+#contenedor #contenido .contenido__seccion--sobremi .contenido__seccion--sobremi_margen {
+  height: 30px;
+}
+#contenedor #contenido .contenido__seccion--sobremi h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  color: #333;
+  margin: 0 0 35px;
+  line-height: 40px;
+  padding-top: 7px;
+}
+#contenedor #contenido .contenido__seccion--sobremi p {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000;
+  line-height: 30px;
+}
+#contenedor #contenido .contenido__seccion--sobremi p span {
+  font-weight: bold;
 }
 #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi {
   height: 100%;
 }
+#contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt,
+#contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--img {
+  box-sizing: border-box;
+}
 #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt {
-  padding: 10px;
+  padding: 15px;
   background-color: #fff;
   width: 100%;
   min-width: 375px;
@@ -397,13 +434,17 @@ p {
   font-size: 2rem;
   color: #333;
   text-align: center;
-  margin-bottom: 15px;
+  margin: 10px 0 15px;
+  line-height: 27px;
 }
 #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt p {
   font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #000;
-  text-align: center;
+  text-align: justify;
+  line-height: 27px;
+  margin: 0 0 10px;
+  font-weight: normal;
 }
 #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--img {
   width: 100%;
@@ -441,7 +482,6 @@ p {
   #contenedor #cabeza .cabeza__principal--contenedor {
     background-color: rgba(0, 0, 0, 0.75);
     padding-bottom: 15px;
-    position: fixed;
   }
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo {
     margin-left: 15px;
@@ -457,7 +497,7 @@ p {
   #contenedor #cabeza .cabeza__carousel--contenedor {
     width: 90vw;
     margin-left: 3vw;
-    margin-top: 35vh;
+    margin-top: 25vh;
   }
   #contenedor #cabeza .cabeza__carousel--contenedor .carousel-item div {
     width: 70vw;
@@ -502,14 +542,14 @@ p {
   #contenedor #cabeza .cabeza__carousel--contenedor {
     width: 90vw;
     margin-left: 3vw;
-    margin-top: 35vh;
+    margin-top: 25vh;
   }
   #contenedor #cabeza .cabeza__carousel--contenedor .carousel-item div {
     width: 50vw;
   }
   #contenedor #cabeza .cabeza__carousel--contenedor .carousel-item div h2 {
     padding-top: 11px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-size: 6rem;
   }
   #contenedor #cabeza .cabeza__carousel--contenedor .carousel-item div p {

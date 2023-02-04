@@ -53,21 +53,20 @@
     font-size: 1.25rem;
     font-weight: 500;
     text-transform: $mayusc;
-    letter-spacing: 0.1rem;
+    letter-spacing: 1px;
     text-align: map-get($pos, "ctr");
-    // background-color: map-get($color, "rojo");
     border: map-get($abs_lng, "3px") $solid map-get($color, "rojo_01");
     border-radius: 27px;
     transition: map-get($times, "m_seg");
-    padding: 7px 5px 9px;
+    padding: 7px 7px 7px;
     margin: 0 auto;
     cursor: $cursor;
-    width: 185px;
-    animation: btn1 7s infinite;
+    width: 175px;
+    animation: btn1 3s infinite;
 
     @keyframes btn1 {
         0%{transform: scale(1);}
-        50%{transform: scale(1.2);}
+        50%{transform: scale(1.1);}
         100%{transform: scale(1);}
     }
 

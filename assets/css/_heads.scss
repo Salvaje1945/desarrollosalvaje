@@ -13,11 +13,11 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        
+
         .cabeza__principal--contenedor {
             @extend .flex-1;
             background-color: rgba(0, 0, 0, 0.7);
-            position: fixed;
+            // position: fixed;
             padding-bottom: 16px;
             z-index: 999;
 
@@ -49,24 +49,18 @@
                     text-transform: $mayusc;
                     font-weight: bold;
 
-
                     li {
                         display: inline-block;
                         margin: 0 5px;
 
-                        // &:hover {
-                        //     border-bottom: 2px solid map-get($color, "rojo");
-                        //     transition: 0.5s; rgba(255,0,0,0)
-                        // }
-
                         a {
                             color: map-get($color, "rojo_01");
-                            border-bottom: 3px solid rgba(255,0,0,0);
+                            border-bottom: 3px solid rgba(255, 0, 0, 0);
                             transition: all 0.5s;
 
                             &:hover {
                                 color: map-get($color, "blanco");
-                                border-bottom: 3px solid rgba(255,0,0,1);
+                                border-bottom: 3px solid rgba(255, 0, 0, 1);
                                 transition: all 0.5s;
                             }
                         }
@@ -82,26 +76,19 @@
                 .hamburguesa,
                 .cerrar {
                     color: map-get($color, "blanco");
-                    // -webkit-text-stroke: 2px #fff;
                     font-weight: bold;
+                    cursor: $cursor;
                 }
-            
+
                 .cerrar {
-                    // text-align: map-get($pos, "ctr");
                     display: map-get($glob_kw, "none");
                     font-size: 3rem;
                     margin-right: 3px;
-                }
-            
-                .hamburguesa,
-                .cerrar {
-                    cursor: $cursor;
                 }
 
                 .hamburguesa {
                     display: map-get($disp, "blk");
                     font-size: 2.5rem;
-                    
                 }
 
                 #check {
@@ -111,7 +98,7 @@
                 #check:checked~.hamburguesa {
                     display: map-get($glob_kw, "none");
                 }
-            
+
                 #check:checked~ul {
                     right: map-get($num_int, "0");
                     padding-left: map-get($num_int, "0");
@@ -120,39 +107,37 @@
                 #check:checked~.cerrar {
                     display: map-get($disp, "blk");
                 }
-            
+
                 ul {
                     font-family: $fam_03;
                     width: 100%;
-                    position: map-get($pos, "fix");
+                    position:fixed;
                     top: 110px;
                     right: - map-get($per_cent, "100");
-                    // z-index: map-get($num_int, "100") * 10 - map-get($num_int, "1");
                     list-style: map-get($glob_kw, "none");
-                    background-color: rgba(18,18,18,0.93);
-                    // opacity: 0.9;
+                    background-color: rgba(18, 18, 18, 0.95);
                     transition: map-get($times, "m_seg");
                     height: 505px;
                     z-index: 999;
-            
+
                     li {
-                        padding: 15px 0; 
+                        padding: 15px 0;
                         font-size: 1.35rem;
-                        font-weight: 590;
+                        font-weight: 600;
                         text-transform: $mayusc;
                         text-align: map-get($pos, "ctr");
                         display: map-get($disp, "blk");
                         border-bottom: 1px solid #666;
                         letter-spacing: 0.1rem;
-                     
+
                         a {
                             color: map-get($color, "rojo_01");
-            
+
                             &:hover {
                                 color: map-get($color, "gris_04");
                             }
-                        }
-
+                        } 
+                        
                         &:last-child {
                             border-bottom: none;
                         }
@@ -185,24 +170,22 @@
             display: block;
             width: 90vw;
             margin-left: 5vw;
-            margin-top: 20vh;
-
-            // Carousel robado a bootstrap experimento 1
+            margin-top: 5vh;
 
             .carousel {
                 position: relative;
             }
-              
+
             .carousel.pointer-event {
                 touch-action: none;
             }
-              
+
             .carousel-inner {
                 position: relative;
                 width: 100%;
                 overflow: hidden;
             }
-              
+
             .carousel-item {
                 position: relative;
                 display: none;
@@ -251,23 +234,22 @@
                     }
                 }
             }
-              
+
             .carousel-item.active,
             .carousel-item-next,
             .carousel-item-prev {
                 display: block;
             }
-              
+
             .carousel-item-next:not(.carousel-item-start),
             .active.carousel-item-end {
                 transform: translateX(100%);
             }
-              
+
             .carousel-item-prev:not(.carousel-item-end),
             .active.carousel-item-start {
                 transform: translateX(-100%);
             }
-
         }
     }
 }

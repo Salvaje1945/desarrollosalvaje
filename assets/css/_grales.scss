@@ -3,6 +3,7 @@
 html,
 :root {
     font-size: $root_fsize;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -19,11 +20,11 @@ html,
     margin-inline-end: map-get($num_int, "0");
 }
 
-*,
-::after,
-::before {
-    box-sizing: border-box;
-}
+// *,
+// ::after,
+// ::before {
+//     box-sizing: border-box;
+// }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
@@ -39,7 +40,6 @@ h1 {
 
 h2 {
     font-family: $fam_01;
-    font-size: 1.5rem;
 }
 
 p {
