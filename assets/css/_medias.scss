@@ -8,6 +8,21 @@
             .contenido__seccion--sobremi {
     
                 .contenido__articulo--sobremi {
+
+                    // &:first-child {
+                    //     border-top: 3px solid #999;
+                    // }
+                    // &:nth-child(1) {
+                    //     border-top: 50px solid #000;
+                    // }
+
+                    &:first-of-type {
+                        border-top: 1px solid #ccc;
+                    }
+
+                    &:last-child {
+                        border-bottom: 1px solid #ccc;
+                    }
     
                     .contenido__sobremi--txt {
                         width: map-get($per_cent, "50");
@@ -85,6 +100,48 @@
                 }
             }
         }
+
+        #contenido {
+            .contenido__seccion--sobremi_margen {
+                height: 75px;
+            }
+
+            .contenido__seccion--sobremi {
+                h2 {
+                    font-size: 4.5rem;
+                    margin-bottom: 35px;
+                    line-height: 54px;
+                }
+
+                p {
+                    font-size: 2.5rem;
+                    margin-bottom: 100px;
+                }
+
+                .contenido__articulo--sobremi {
+                    .contenido__sobremi--txt {
+                        h3 {
+                            font-family: $fam_01;
+                            font-size: 2.75rem;
+                            color: #333;
+                            text-align: map-get($pos, "ctr");
+                            margin: 10px 0 15px;
+                            line-height: 27px;
+                        }
+    
+                        p {
+                            font-family: $fam_04;
+                            font-size: 1.5rem;
+                            color: #000;
+                            text-align: justify;
+                            line-height: 30px;
+                            margin: 0 0 10px;
+                            font-weight:100;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -138,11 +195,11 @@
             .cabeza__carousel--contenedor {
                 width: 90vw;
                 margin-left: 3vw;
-                margin-top: 25vh;
+                margin-top: 23vh;
 
                 .carousel-item {
                     div {
-                        width:50vw;
+                        width:52vw;
 
                         h2 {
                             padding-top: 11px;

@@ -75,7 +75,9 @@ p {
 
 .flex-1, #contenedor #cabeza .cabeza__principal--contenedor,
 .flex-2,
-.flex-2-2 {
+#contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(odd),
+.flex-2-2,
+#contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(even) {
   display: flex;
   width: 100%;
 }
@@ -86,22 +88,24 @@ p {
   align-items: center;
 }
 
-.flex-2 {
+.flex-2, #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(odd) {
   flex-flow: row wrap;
 }
 
-.flex-2-2 {
+.flex-2-2, #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(even) {
   flex-flow: column-reverse wrap;
 }
 
-.flex-2,
-.flex-2-2 {
+.flex-2, #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(odd),
+.flex-2-2,
+#contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(even) {
   justify-content: flex-start;
 }
 
 @media only screen and (min-width: 960px) {
-  .flex-2,
-.flex-2-2 {
+  .flex-2, #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(odd),
+.flex-2-2,
+#contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(even) {
     flex-flow: row nowrap;
     justify-content: center;
   }
@@ -370,30 +374,31 @@ p {
   box-sizing: border-box;
   width: 50px;
   height: 50px;
-  border-radius: 15px;
+  border-radius: 100%;
   position: fixed;
   bottom: 15px;
   right: -100%;
-  background-color: #ff0000;
-  border: 3px solid #000;
+  background-color: #000;
+  border: 3px solid #ff0000;
   transition: 0.5s;
   padding: 6px 5px 5px 6px;
 }
 #contenedor #contenido #contenido__subir a {
-  color: #666;
+  color: #ff0000;
   font-size: 2rem;
+  font-weight: 900;
 }
 #contenedor #contenido #contenido__subir a:hover {
-  color: #000;
+  color: #fff;
+}
+#contenedor #contenido .contenido__seccion--sobremi_margen {
+  height: 30px;
 }
 #contenedor #contenido .contenido__seccion--sobremi {
   background-color: #fff;
   width: 100%;
   display: block;
   box-sizing: border-box;
-}
-#contenedor #contenido .contenido__seccion--sobremi .contenido__seccion--sobremi_margen {
-  height: 30px;
 }
 #contenedor #contenido .contenido__seccion--sobremi h2 {
   font-size: 3.5rem;
@@ -434,7 +439,7 @@ p {
   font-size: 2rem;
   color: #333;
   text-align: center;
-  margin: 10px 0 15px;
+  margin: 5px 0 10px;
   line-height: 27px;
 }
 #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt p {
@@ -463,8 +468,13 @@ p {
 #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .sobremi_img_03 {
   background-image: url(../img/mis_habilidades.jpg);
 }
-
 @media only screen and (min-width: 960px) {
+  #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:first-of-type {
+    border-top: 1px solid #ccc;
+  }
+  #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:last-child {
+    border-bottom: 1px solid #ccc;
+  }
   #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt {
     width: 50%;
     height: auto;
@@ -513,6 +523,35 @@ p {
     line-height: 52px;
     text-shadow: 3px 3px #000;
   }
+  #contenedor #contenido .contenido__seccion--sobremi_margen {
+    height: 75px;
+  }
+  #contenedor #contenido .contenido__seccion--sobremi h2 {
+    font-size: 4.5rem;
+    margin-bottom: 35px;
+    line-height: 54px;
+  }
+  #contenedor #contenido .contenido__seccion--sobremi p {
+    font-size: 2.5rem;
+    margin-bottom: 100px;
+  }
+  #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt h3 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 2.75rem;
+    color: #333;
+    text-align: center;
+    margin: 10px 0 15px;
+    line-height: 27px;
+  }
+  #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt p {
+    font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
+    font-size: 1.5rem;
+    color: #000;
+    text-align: justify;
+    line-height: 30px;
+    margin: 0 0 10px;
+    font-weight: 100;
+  }
 }
 @media only screen and (min-width: 1280px) {
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo {
@@ -542,10 +581,10 @@ p {
   #contenedor #cabeza .cabeza__carousel--contenedor {
     width: 90vw;
     margin-left: 3vw;
-    margin-top: 25vh;
+    margin-top: 23vh;
   }
   #contenedor #cabeza .cabeza__carousel--contenedor .carousel-item div {
-    width: 50vw;
+    width: 52vw;
   }
   #contenedor #cabeza .cabeza__carousel--contenedor .carousel-item div h2 {
     padding-top: 11px;
