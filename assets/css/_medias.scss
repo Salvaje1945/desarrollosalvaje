@@ -6,37 +6,21 @@
         #contenido {
     
             .contenido__seccion--sobremi {
+                margin-bottom: 50px;
     
                 .contenido__articulo--sobremi {
 
-                    // &:first-child {
-                    //     border-top: 3px solid #999;
-                    // }
-                    // &:nth-child(1) {
-                    //     border-top: 50px solid #000;
-                    // }
-
                     &:first-of-type {
-                        border-top: 1px solid #ccc;
+                        border-top: 1px solid #ededed;
                     }
 
                     &:last-child {
-                        border-bottom: 1px solid #ccc;
+                        border-bottom: 1px solid #ededed;
                     }
     
                     .contenido__sobremi--txt {
                         width: map-get($per_cent, "50");
                         height: auto;
-    
-                        // h3 {
-                        //     text-align: map-get($pos, "ctr");
-                        //     margin-bottom: map-get($abs_lng, "5px") * 3;
-                        // }
-    
-                        // p {
-                        //     text-align: map-get($pos, "ctr");
-                        //     font-size: map-get($rel_lng, "1.125");
-                        // }
                     }
     
                     .contenido__sobremi--img {
@@ -121,24 +105,33 @@
                 .contenido__articulo--sobremi {
                     .contenido__sobremi--txt {
                         h3 {
-                            font-family: $fam_01;
                             font-size: 2.75rem;
-                            color: #333;
-                            text-align: map-get($pos, "ctr");
                             margin: 10px 0 15px;
-                            line-height: 27px;
                         }
     
                         p {
-                            font-family: $fam_04;
                             font-size: 1.5rem;
-                            color: #000;
-                            text-align: justify;
                             line-height: 30px;
-                            margin: 0 0 10px;
                             font-weight:100;
                         }
                     }
+                }
+            }
+
+            .contenido__seccion--servicios { 
+                .contenido__seccion--servicios_margentop {
+                    height: 75px;
+                }
+
+                h2 {
+                    font-size: 4.5rem;
+                    margin-bottom: 35px;
+                    line-height: 54px;
+                }
+    
+                p {
+                    font-size: 2.5rem;
+                    margin-bottom: 75px;
                 }
             }
         }
@@ -165,6 +158,22 @@
                 .cabeza__principal--promo {
                     display: inline-block;
                     margin-left: 4vw;
+                }
+            }
+        }
+
+        #contenido {
+            .contenido__seccion--servicios { 
+                .contenido__seccion--servicios_margentop {
+                    height: 90px;
+                }
+
+                h2 {
+                    margin-bottom: 45px;
+                }
+    
+                p {
+                    margin-bottom: 100px;
                 }
             }
         }
@@ -210,6 +219,22 @@
                         p {
                             font-size: 3rem;
                             line-height: 56px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #contenido {
+            .contenido__seccion--servicios {
+                .contenido__servicios--contenedor {
+                    margin-bottom: 25px;
+
+                    .contenido__servicios--articulo {
+
+                        p {
+                            font-size: 1.5rem;
+                            line-height: 30px;
                         }
                     }
                 }

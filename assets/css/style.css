@@ -77,7 +77,9 @@ p {
 .flex-2,
 #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(odd),
 .flex-2-2,
-#contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(even) {
+#contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(even),
+.flex-3,
+#contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor {
   display: flex;
   width: 100%;
 }
@@ -88,8 +90,15 @@ p {
   align-items: center;
 }
 
-.flex-2, #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(odd) {
+.flex-2, #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(odd),
+.flex-3,
+#contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor {
   flex-flow: row wrap;
+}
+
+.flex-3, #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor {
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .flex-2-2, #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:nth-child(even) {
@@ -114,6 +123,27 @@ p {
   .flex-1, #contenedor #cabeza .cabeza__principal--contenedor {
     justify-content: space-evenly;
     min-width: 1280px;
+  }
+}
+.cols-wrp, #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo {
+  width: 350px;
+  min-height: 325px;
+  height: auto;
+  margin: 0 0 50px;
+  padding: 10px 10px 0;
+  color: #fff;
+}
+
+@media only screen and (min-width: 1024px) {
+  .cols-wrp, #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo {
+    width: 300px;
+    padding: 5px 5px 0;
+    min-height: 375px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .cols-wrp, #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo {
+    width: 350px;
   }
 }
 .btn_01, #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--promo .promo__btn {
@@ -382,6 +412,7 @@ p {
   border: 3px solid #ff0000;
   transition: 0.5s;
   padding: 6px 5px 5px 6px;
+  z-index: 11;
 }
 #contenedor #contenido #contenido__subir a {
   color: #ff0000;
@@ -468,12 +499,101 @@ p {
 #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .sobremi_img_03 {
   background-image: url(../img/mis_habilidades.jpg);
 }
+#contenedor #contenido .contenido__seccion--servicios {
+  background-color: #232323;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__seccion--servicios_margentop {
+  height: 50px;
+  width: 100%;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__seccion--servicios_margentop div {
+  position: relative;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__seccion--servicios_margentop div::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 30px;
+  background-size: 30px 100%;
+  background-image: linear-gradient(135deg, #fff 25%, transparent 25%), linear-gradient(225deg, #fff 25%, transparent 25%);
+  background-position: 0 0;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__seccion--servicios_margenbott {
+  height: 50px;
+  width: 100%;
+  background: #fff;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__seccion--servicios_margenbott div {
+  position: relative;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__seccion--servicios_margenbott div::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 30px;
+  background-size: 30px 100%;
+  background-image: linear-gradient(135deg, #232323 25%, transparent 25%), linear-gradient(225deg, #232323 25%, transparent 25%);
+  background-position: 0 0;
+}
+#contenedor #contenido .contenido__seccion--servicios h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 35px;
+  line-height: 40px;
+  padding-top: 7px;
+  display: block;
+}
+#contenedor #contenido .contenido__seccion--servicios p {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff;
+  line-height: 30px;
+  display: block;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo img {
+  float: left;
+  margin: 0 10px 3px 0;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo h3 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  margin: 0 0 15px;
+  line-height: 27px;
+  text-align: left;
+  letter-spacing: 1.3px;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo p {
+  font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
+  font-size: 1.25rem;
+  text-align: justify;
+  line-height: 27px;
+  margin: 0 0 10px;
+  font-weight: normal;
+}
+
 @media only screen and (min-width: 960px) {
+  #contenedor #contenido .contenido__seccion--sobremi {
+    margin-bottom: 50px;
+  }
   #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:first-of-type {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ededed;
   }
   #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi:last-child {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ededed;
   }
   #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt {
     width: 50%;
@@ -536,21 +656,25 @@ p {
     margin-bottom: 100px;
   }
   #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt h3 {
-    font-family: "Bebas Neue", cursive;
     font-size: 2.75rem;
-    color: #333;
-    text-align: center;
     margin: 10px 0 15px;
-    line-height: 27px;
   }
   #contenedor #contenido .contenido__seccion--sobremi .contenido__articulo--sobremi .contenido__sobremi--txt p {
-    font-family: "Helvetica", "Segoe UI", "Tahoma", Geneva, "Verdana", "sans-serif";
     font-size: 1.5rem;
-    color: #000;
-    text-align: justify;
     line-height: 30px;
-    margin: 0 0 10px;
     font-weight: 100;
+  }
+  #contenedor #contenido .contenido__seccion--servicios .contenido__seccion--servicios_margentop {
+    height: 75px;
+  }
+  #contenedor #contenido .contenido__seccion--servicios h2 {
+    font-size: 4.5rem;
+    margin-bottom: 35px;
+    line-height: 54px;
+  }
+  #contenedor #contenido .contenido__seccion--servicios p {
+    font-size: 2.5rem;
+    margin-bottom: 75px;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -566,6 +690,15 @@ p {
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--promo {
     display: inline-block;
     margin-left: 4vw;
+  }
+  #contenedor #contenido .contenido__seccion--servicios .contenido__seccion--servicios_margentop {
+    height: 90px;
+  }
+  #contenedor #contenido .contenido__seccion--servicios h2 {
+    margin-bottom: 45px;
+  }
+  #contenedor #contenido .contenido__seccion--servicios p {
+    margin-bottom: 100px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -594,5 +727,12 @@ p {
   #contenedor #cabeza .cabeza__carousel--contenedor .carousel-item div p {
     font-size: 3rem;
     line-height: 56px;
+  }
+  #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor {
+    margin-bottom: 25px;
+  }
+  #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo p {
+    font-size: 1.5rem;
+    line-height: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
