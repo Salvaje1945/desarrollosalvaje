@@ -2,6 +2,7 @@ window.onload=inicio;
 function inicio(){
     document.getElementById("hamb-sobremi").onclick=cierre_menu;
     document.getElementById("hamb-servicios").onclick=cierre_menu;
+    document.getElementById("hamb-oservicios").onclick=cierre_menu;
     document.getElementById("alcielo").onclick=chau_boton;
     document.getElementById("dkp-sobremi").onclick=hola_boton;
     document.getElementById("dkp-servicios").onclick=hola_boton;

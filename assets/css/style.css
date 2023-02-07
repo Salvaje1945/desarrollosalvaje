@@ -559,10 +559,20 @@ p {
   font-family: "Pathway Gothic One", sans-serif;
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   color: #fff;
   line-height: 30px;
   display: block;
+}
+#contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor #OtrosServicios {
+  font-size: 3.5rem;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 55px;
+  line-height: 40px;
+  padding-top: 7px;
+  display: block;
+  width: 100vw;
 }
 #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo img {
   float: left;
@@ -676,6 +686,9 @@ p {
     font-size: 2.5rem;
     margin-bottom: 75px;
   }
+  #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor #OtrosServicios {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1280px) {
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo {
@@ -730,9 +743,5 @@ p {
   }
   #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor {
     margin-bottom: 25px;
-  }
-  #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo p {
-    font-size: 1.5rem;
-    line-height: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

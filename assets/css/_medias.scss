@@ -133,6 +133,12 @@
                     font-size: 2.5rem;
                     margin-bottom: 75px;
                 }
+
+                .contenido__servicios--contenedor {
+                    #OtrosServicios {
+                        display: none; 
+                    }
+                }
             }
         }
     }
@@ -229,14 +235,6 @@
             .contenido__seccion--servicios {
                 .contenido__servicios--contenedor {
                     margin-bottom: 25px;
-
-                    .contenido__servicios--articulo {
-
-                        p {
-                            font-size: 1.5rem;
-                            line-height: 30px;
-                        }
-                    }
                 }
             }
         }
