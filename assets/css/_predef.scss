@@ -55,6 +55,19 @@
     // }
 }
 
+// Cajas básicas para sections del main
+
+.main-section {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+@mixin main-section_edit ($color-bg) {
+    @extend .main-section;
+    background-color: $color-bg;
+}
+
 // Cajas hijas
 
 .cols-wrp {
@@ -75,15 +88,34 @@
     }
 }
 
-// @media only screen and (min-width: map-get($wth_res, "dkp_01")) {
-//     .cols-wrp {
-//         min-height: 400px;
-//     }
-// }
-
 @media only screen and (min-width: map-get($wth_res, "dkp_03")) {
     .cols-wrp {
         width: 350px;
+    }
+}
+
+.cols-wrp-adj {
+    width: 85vw;
+    height: auto;
+    background-color: #fff;
+    margin: 0 0 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 11px 0px rgb(0 0 0 / 50%);
+    position: relative;
+}
+
+@media only screen and (min-width: map-get($wth_res, "tbl_01")) {
+    .cols-wrp-adj {
+        width: 35vw;
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width: map-get($brk_pts, "bp_03")) {
+    .cols-wrp-adj {
+        width: 268px;
+        min-height: 275px;
+        height: auto;
     }
 }
 
@@ -119,6 +151,81 @@
         border: map-get($abs_lng, "3px") $solid map-get($color, "blanco");
         color: map-get($color, "rojo_01");
         font-weight: bold;
+    }
+}
+
+.btn_02 {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    background-color: #292929;
+    color: #fff;
+    border: 1px solid #000;
+    transition: 0.3s;
+    font-family: $fam_02;
+    letter-spacing: 0.3vw;
+    font-size: 5.5vw;
+    font-weight: normal;
+    padding: 2.7% 7% 2.5%;
+    width: fit-content;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: 1px 1px 11px 0px rgb(0 0 0 / 70%);
+    animation: portf-btn 0.9s forwards;
+
+    @keyframes portf-btn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        background-color: #960101;
+        transition: 0.3s;
+    }
+
+    &:active {
+        transition: none;
+        background-color: #222;
+        border-left: 3px solid #000;
+        border-top: 3px solid #000;
+        // border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        box-shadow: inset 3px 2px 9px 0px rgb(0 0 0 / 57%), 1px 1px 11px 0px rgb(0 0 0 / 55%);
+        color: #ababab;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .btn_02 {
+        letter-spacing: 0.1vw;
+        font-size: 4.5vw;
+        padding: 2.1% 7% 1.9%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .btn_02 {
+        letter-spacing: 1px;
+        font-size: 1.35rem;
+        padding: 9px 25px 8px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .btn_02 {
+        letter-spacing: 0.5px;
+        font-size: 1.25rem;
+        padding: 7px 15px 7px;
+        border-radius: 7px;
     }
 }
 

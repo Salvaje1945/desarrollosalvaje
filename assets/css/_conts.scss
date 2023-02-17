@@ -17,7 +17,7 @@
             background-color: #000;
             border: 3px solid #ff0000;
             transition: 0.5s;
-            padding: 6px 5px 5px 6px;
+            padding: 6px 5px 5px 8px;
             z-index: 11;
 
             a {
@@ -36,10 +36,7 @@
         }
 
         .contenido__seccion--sobremi {
-            background-color: #fff;
-            width: 100%;
-            display: block;
-            box-sizing: border-box;
+            @include main-section_edit($color-bg: #fff);
 
             h2 {
                 font-size: 3.5rem;
@@ -132,10 +129,7 @@
         }
 
         .contenido__seccion--servicios {
-            background-color: #232323;
-            width: 100%;
-            display: block;
-            box-sizing: border-box;
+            @include main-section_edit($color-bg: #232323);
 
             .contenido__seccion--servicios_margentop {
                 height: 50px;
@@ -161,7 +155,7 @@
             }
 
             .contenido__seccion--servicios_margenbott {
-                height: 50px;
+                height: 30px;
                 width: 100%;
                 background: #fff;
 
@@ -209,6 +203,12 @@
                 // margin-bottom: 35px;
 
                 #OtrosServicios {
+                    height: 50px;
+                    width: 100%;
+                    display: block;
+                }
+
+                #OtrosServiciosh2 {
                     font-size: 3.5rem;
                     text-align: center;
                     color: #fff;
@@ -244,9 +244,255 @@
                         margin: 0 0 10px;
                         font-weight: normal;
                     }
+
+                    &:nth-child(4){
+                        margin-bottom: 0;
+                    }
                 }
             }
 
         }
+
+        .contenido__seccion--portfolio {
+            @include main-section_edit($color-bg: #fff);
+
+            .contenido__seccion--portfolio_margentop {
+                height: 30px;
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 3.5rem;
+                text-align: center;
+                color: #333;
+                margin: 0 0 35px;
+                line-height: 40px;
+                padding-top: 7px;
+                display: block; 
+            }
+
+            p {
+                font-family: $fam_02;
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 55px;
+                color: #000;
+                line-height: 30px;
+                display: block;
+            }
+
+            .contenido__portfolio--contenedor,
+            .contenido__portfolio--contenedor2 {
+                @extend .flex-3;
+
+                .portfolio__btn--box {
+                    width: 85vw;
+                    height: auto;
+                    display: block;
+                    margin: 0 0 50px;
+
+                    .portfolio__btn--box-btn {
+                        display: block;
+                        position: relative;
+                        text-transform: uppercase;
+                        background-color: #740000;
+                        color: #ccc;
+                        border: 1px solid #000;
+                        transition: 0.3s;
+                        font-family: $fam_02;
+                        // letter-spacing: 0.3vw;
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                        padding: 5px 7px; 
+                        width: 100px;
+                        text-align: center;
+                        margin: 0 auto;
+                        // transform: translate(-50%, -50%);
+    
+                        &:hover {
+                            background-color: #333;
+                            border: 1px solid #000;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+
+                .contenido__portfolio--articulo {
+                    @extend .cols-wrp-adj;
+
+                    .portfolio__articulo--hover {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 10;
+                        background-color:rgba(203,0,0,0.0);
+
+                        .articulo__hover--contenedor {
+                            box-sizing: border-box;
+                            position: absolute;
+                            display: block;
+                            visibility: hidden;
+                            border-radius: 10px;
+                            background-color: rgba(134,4,4,0.93);
+                            animation: hvr_cont-dps 0.3s forwards;
+
+                            @keyframes hvr_cont-dps {
+                                from {
+                                    width: 100%;
+                                    height: 100%;
+                                    padding: 3%;
+                                    top: 0;
+                                    left: 0;
+                                    visibility: visible;
+                                }
+                                to {
+                                    width: 0;
+                                    height: 0;
+                                    top: 50%;
+                                    left: 50%; 
+                                    margin: auto;
+                                    visibility: hidden;
+                                }
+                            }
+
+                            .articulo__hover--borde {
+                                display: block;
+                                box-sizing: border-box;
+                                border: 1px solid #fff;
+                                animation: hvr_bdr-dps 0.2s forwards;
+    
+                                @keyframes hvr_bdr-dps {
+                                    from {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    to {
+                                        width: 0;
+                                        height: 0;
+                                        top: 50%;
+                                        left: 50%; 
+                                        margin: auto;
+                                        border: none;
+                                    }
+                                }
+
+                                .articulo__hover--btn {
+                                    display: none;
+                                }                              
+                            }
+                        }
+
+                        
+
+                        &:hover {
+                            .articulo__hover--contenedor{
+                                visibility: visible;
+                                animation: hvr_cont 0.3s forwards;
+
+                                @keyframes hvr_cont {
+                                    from{
+                                        width: 0;
+                                        height: 0;
+                                        top: 50%;
+                                        left: 50%; 
+                                        margin: auto;
+                                    }
+                                    to {
+                                        width: 100%;
+                                        height: 100%;
+                                        padding: 3%;
+                                        top: 0;
+                                        left: 0; 
+                                    }
+                                }
+
+                                .articulo__hover--borde {
+                                    border: 1px solid #fff;
+                                    animation: hvr_bdr 0.3s forwards;
+                                    
+                                    @keyframes hvr_bdr {
+                                        from{
+                                            width: 0;
+                                            height: 0;
+                                            top: 50%;
+                                            left: 50%; 
+                                            margin: auto;
+                                        }
+                                        to {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    .articulo__hover--btn {
+                                        @extend .btn_02;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                
+                    .portfolio__articulo--cont {
+                        padding: 9px;
+                        position: relative;
+
+                        .imagen {
+                            width: 100%;
+                            height: auto;
+                            background-color: #fff;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            margin-bottom: 15px;
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                                display: block;
+                            }
+                        }
+
+                        h3 {
+                            font-family: $fam_01;
+                            font-size: 1.75rem;
+                            margin: 0 0 5px;
+                            line-height: 27px;
+                            text-align: left;
+                            color: #333;
+                        }
+
+                        p {
+                            font-family: $fam_04;
+                            font-size: 1rem;
+                            text-align: left;
+                            line-height: 18px;
+                            margin: 0 0 5px;
+                            font-weight: normal;
+
+                            span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+                .articulo__portfolio--nocel {
+                    display: none;
+                }
+
+                .portfolio__articulo--ciego {
+                    display: none;
+                    visibility: map-get($vis, "coll");
+                    width: 268px;
+                    height: map-get($abs_lng, "1px");
+                    padding: map-get($num_int, "0");
+                    margin: map-get($num_int, "0");
+                }
+            }
+
+            .contenido__portfolio--contenedor2 {
+                display: none;
+            }
+        }
     }
 }
+
