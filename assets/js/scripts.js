@@ -4,10 +4,12 @@ function inicio(){
     document.getElementById("hamb-servicios").onclick=cierre_menu;
     document.getElementById("hamb-oservicios").onclick=cierre_menu;
     document.getElementById("hamb-portfolio").onclick=cierre_menu;
+    document.getElementById("hamb-proyectos").onclick=cierre_menu;
     document.getElementById("alcielo").onclick=chau_boton;
     document.getElementById("dkp-sobremi").onclick=hola_boton;
     document.getElementById("dkp-servicios").onclick=hola_boton;
     document.getElementById("dkp-portfolio").onclick=hola_boton;
+    document.getElementById("dkp-proyectos").onclick=hola_boton;
     document.getElementById("vermas-portfolio").onclick=mas_portfolio;
     document.getElementById("vermenos-portfolio").onclick=menos_portfolio;
 }

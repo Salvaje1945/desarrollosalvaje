@@ -81,7 +81,8 @@ p {
 .flex-3,
 #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor,
 #contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor,
-#contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor2 {
+#contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor2,
+#contenedor #contenido .contenido__seccion--proyectos .contenido__proyectos--contenedor {
   display: flex;
   width: 100%;
 }
@@ -96,12 +97,13 @@ p {
 .flex-3,
 #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor,
 #contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor,
-#contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor2 {
+#contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor2,
+#contenedor #contenido .contenido__seccion--proyectos .contenido__proyectos--contenedor {
   flex-flow: row wrap;
 }
 
 .flex-3, #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor, #contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor,
-#contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor2 {
+#contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor2, #contenedor #contenido .contenido__seccion--proyectos .contenido__proyectos--contenedor {
   justify-content: space-evenly;
   align-items: flex-start;
 }
@@ -127,11 +129,11 @@ p {
 @media only screen and (min-width: 1280px) {
   .flex-1, #contenedor #cabeza .cabeza__principal--contenedor {
     justify-content: space-evenly;
-    min-width: 1280px;
   }
 }
-.main-section, #contenedor #contenido .contenido__seccion--sobremi, #contenedor #contenido .contenido__seccion--servicios, #contenedor #contenido .contenido__seccion--portfolio {
+.main-section, #contenedor #contenido .contenido__seccion--sobremi, #contenedor #contenido .contenido__seccion--servicios, #contenedor #contenido .contenido__seccion--portfolio, #contenedor #contenido .contenido__seccion--proyectos {
   width: 100%;
+  height: auto;
   display: block;
   box-sizing: border-box;
 }
@@ -149,7 +151,6 @@ p {
   .cols-wrp, #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo {
     width: 300px;
     padding: 5px 5px 0;
-    min-height: 375px;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -196,7 +197,7 @@ p {
   border: 3px solid #ff0000;
   border-radius: 27px;
   transition: 0.5s;
-  padding: 7px 7px 7px;
+  padding: 7px;
   margin: 0 auto;
   cursor: pointer;
   width: 175px;
@@ -995,7 +996,29 @@ p {
 #contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor2 {
   display: none;
 }
-
+#contenedor #contenido .contenido__seccion--proyectos {
+  background-color: #860404;
+}
+#contenedor #contenido .contenido__seccion--proyectos .contenido__seccion--proyectos_margentop {
+  height: 30px;
+  width: 100%;
+}
+#contenedor #contenido .contenido__seccion--proyectos h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 35px;
+  line-height: 40px;
+  padding-top: 7px;
+}
+#contenedor #contenido .contenido__seccion--proyectos p {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 55px;
+  color: #fff;
+  line-height: 30px;
+}
 @media only screen and (min-width: 768px) {
   #contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor .portfolio__btn--box,
 #contenedor #contenido .contenido__seccion--portfolio .contenido__portfolio--contenedor2 .portfolio__btn--box {
@@ -1109,6 +1132,9 @@ p {
   #contenedor #contenido .contenido__seccion--servicios .contenido__servicios--contenedor .contenido__servicios--articulo:nth-child(3) {
     margin-bottom: 50px;
   }
+  #contenedor #contenido .contenido__seccion--portfolio .contenido__seccion--portfolio_margentop {
+    height: 45px;
+  }
   #contenedor #contenido .contenido__seccion--portfolio h2 {
     font-size: 4.5rem;
     margin-bottom: 35px;
@@ -1125,17 +1151,32 @@ p {
 }
 @media only screen and (min-width: 1280px) {
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo {
-    margin: 10px 4vw 0 0;
+    margin: 10px 1vw 0 0;
   }
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--logo .logo__buho {
     margin: 0 5px 0 0;
   }
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--menu {
-    margin: 15px 0 0 0;
+    margin: 15px 0 0 2vw;
   }
   #contenedor #cabeza .cabeza__principal--contenedor .cabeza__principal--promo {
     display: inline-block;
-    margin-left: 4vw;
+    margin-left: 1vw;
+  }
+  #contenedor #contenido {
+    /*.contenido__seccion--sobremi_margen {
+        height: 30px;
+    }
+
+    .contenido__seccion--sobremi {
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 50px;
+        }
+    }*/
   }
   #contenedor #contenido .contenido__seccion--servicios .contenido__seccion--servicios_margentop {
     height: 90px;

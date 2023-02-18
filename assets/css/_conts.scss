@@ -493,6 +493,38 @@
                 display: none;
             }
         }
+
+        .contenido__seccion--proyectos {
+            @include main-section_edit($color-bg: #860404);
+
+            .contenido__seccion--proyectos_margentop {
+                // display: block;
+                height: 30px;
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 3.5rem;
+                text-align: center;
+                color: #ccc;
+                margin-bottom: 35px;
+                line-height: 40px;
+                padding-top: 7px;
+            }
+
+            p {
+                font-family: $fam_02;
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 55px;
+                color: #fff;
+                line-height: 30px;
+            }
+
+            .contenido__proyectos--contenedor {
+                @extend .flex-3;
+            }
+        }
     }
 }
 

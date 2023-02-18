@@ -46,7 +46,7 @@
 @media only screen and (min-width: map-get($wth_res, "dkp_01")) {
     .flex-1 {
         justify-content: map-get($pos, "spe_eve");
-        min-width: 1280px;
+        // min-width: 1280px;
     }
 
     // .flex-4 {
@@ -59,6 +59,7 @@
 
 .main-section {
     width: 100%;
+    height: auto;
     display: block;
     box-sizing: border-box;
 }
@@ -83,7 +84,7 @@
     .cols-wrp {
         width: 300px;
         padding: 5px 5px 0;
-        min-height: 375px;
+        // min-height: 375px;
 
     }
 }
@@ -134,7 +135,7 @@
     border: map-get($abs_lng, "3px") $solid map-get($color, "rojo_01");
     border-radius: 27px;
     transition: map-get($times, "m_seg");
-    padding: 7px 7px 7px;
+    padding: 7px;
     margin: 0 auto;
     cursor: $cursor;
     width: 175px;

@@ -184,7 +184,10 @@
                 }
             }
 
-            .contenido__seccion--portfolio {   
+            .contenido__seccion--portfolio {
+                .contenido__seccion--portfolio_margentop {
+                    height: 45px;
+                }   
                 
                 h2 {
                     font-size: 4.5rem;
@@ -214,7 +217,7 @@
 
             .cabeza__principal--contenedor {
                 .cabeza__principal--logo {
-                    margin: 10px 4vw 0 0;
+                    margin: 10px 1vw 0 0;
 
                     .logo__buho {
                         margin: 0 5px 0 0;
@@ -222,17 +225,32 @@
                 }
 
                 .cabeza__principal--menu {
-                    margin: 15px 0 0 0;
+                    margin: 15px 0 0 2vw;
                 }
 
                 .cabeza__principal--promo {
                     display: inline-block;
-                    margin-left: 4vw;
+                    margin-left: 1vw;
                 }
             }
         }
 
         #contenido {
+            /*.contenido__seccion--sobremi_margen {
+                height: 30px;
+            }
+
+            .contenido__seccion--sobremi {
+                h2 {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    margin-bottom: 50px;
+                }
+            }*/
+
+
             .contenido__seccion--servicios { 
                 .contenido__seccion--servicios_margentop {
                     height: 90px;
