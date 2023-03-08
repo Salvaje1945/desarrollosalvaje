@@ -1,19 +1,52 @@
 @use 'vars' as *;
 @use 'predef' as *;
 
+@media only screen and (min-width: map-get($wth_res, "mob_03")) and (max-width: 1023px) {
+    #contenedor {
+        #cabeza {
+            .cabeza__carousel--contenedor {
+                margin-left: 3vw;
+                margin-top: 28vw;
+
+                .carousel-item {
+                    div{
+                        width: max(100%, 70vw);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 @media only screen and (min-width: map-get($wth_res, "tbl_01")) {
     #contenedor {
         #contenido {
             .contenido__seccion--portfolio {
+                @include main-section_edit($pddng_bott: 35px);
 
-                .contenido__portfolio--contenedor,
-                .contenido__portfolio--contenedor2 {
+                .contenido__portfolio--contenedor {
+
                     .portfolio__btn--box {
-                        display: none;
+                        display: none !important;
                     }
 
-                    .articulo__portfolio--nocel{
-                        display: block;
+                    .contenido__portfolio--articulo{
+                        @include cols-wrp-adj($wth_col: 35vw, $min_hgt: 275px);
+                        display: block !important;
+                    }
+                }
+            }  
+        }
+
+        #pieses {
+            .pieses__contenedor {
+                .pieses__contenedor--cols {
+                    @include cols-3-wrp($cols-3_wth: 93.6vw / 2);
+
+                    &:nth-child(3) {
+                        @include cols-3-wrp($cols-3_wth: 95.8vw);
                     }
                 }
             }
@@ -50,6 +83,26 @@
                     }
                 }
             }
+
+            .contenido__seccion--portfolio {
+
+                .contenido__portfolio--contenedor {
+
+                    .contenido__portfolio--articulo{
+                        @include cols-wrp-adj($wth_col: 35vw, $min_hgt: 300px);
+                    }
+                }
+            }
+
+            .contenido__seccion--proyectos {
+                .contenido__proyectos--contenedor {
+    
+                    .contenido__proyectos--articulo {
+                        @include cols-wrp-adj ($wth_col: 330px);
+    
+                    }
+                }
+            }
         }
     }
 }
@@ -71,6 +124,10 @@
 }
 
 @media only screen and (min-width: map-get($brk_pts, "bp_03")) {
+    .mgn_top{
+        height: 75px;
+    }
+
     #contenedor {
         #cabeza {
             height: 100vh;
@@ -96,7 +153,6 @@
             }
 
             .cabeza__carousel--contenedor {
-                width: 90vw;
                 margin-left: 3vw;
                 margin-top: 25vh;
 
@@ -122,10 +178,6 @@
         }
 
         #contenido {
-            .contenido__seccion--sobremi_margen {
-                height: 75px;
-            }
-
             .contenido__seccion--sobremi {
                 h2 {
                     font-size: 4.5rem;
@@ -155,9 +207,6 @@
             }
 
             .contenido__seccion--servicios { 
-                .contenido__seccion--servicios_margentop {
-                    height: 75px;
-                }
 
                 h2 {
                     font-size: 4.5rem;
@@ -184,10 +233,7 @@
                 }
             }
 
-            .contenido__seccion--portfolio {
-                .contenido__seccion--portfolio_margentop {
-                    height: 45px;
-                }   
+            .contenido__seccion--portfolio {  
                 
                 h2 {
                     font-size: 4.5rem;
@@ -200,10 +246,95 @@
                     margin-bottom: 75px;
                 }
 
-                .contenido__portfolio--contenedor,
-                .contenido__portfolio--contenedor2 {
+                .contenido__portfolio--contenedor {
+
+                    .contenido__portfolio--articulo{
+                        @include cols-wrp-adj($wth_col: 268px, $min_hgt: 275px);
+                    }
+
                     .portfolio__articulo--ciego{
-                        display: block;
+                        @include ciego-01($cgo_disp: block);
+                    }
+                }
+            }
+
+            .contenido__seccion--proyectos {
+
+                h2 {
+                    font-size: 4.5rem;
+                    margin-bottom: 35px;
+                    line-height: 54px;
+                }
+    
+                p {
+                    font-size: 2.5rem;
+                    margin-bottom: 75px;
+                }
+
+                .contenido__proyectos--contenedor {
+
+                    .contenido__proyectos--articulo {
+                        @include cols-wrp-adj($wth_col: 268px, $hgt_col: auto, $min_hgt: 275px);
+                    }
+
+                    .proyectos__articulo--ciego{
+                        @include ciego-01($cgo_disp: block);
+                    }
+                }
+            }
+
+            /*.contenido__seccion--presupuesto {  
+                
+                h2 {
+                    font-size: 4.5rem;
+                    margin-bottom: 35px;
+                    line-height: 54px;
+                }
+    
+                p {
+                    font-size: 2.5rem;
+                    margin-bottom: 75px;
+                }
+            }*/
+        }
+
+        #pieses {
+            .pieses__contenedor {
+                .pieses__contenedor--cols {
+                    @include cols-3-wrp($cols-3_wth: 93.6vw / 3);
+
+                    &:nth-child(3) {
+                        @include cols-3-wrp($cols-3_wth: 93.6vw / 3);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1072px) and (max-width: 1160px) {
+    #contenedor{
+        #contenido{
+            .contenido__seccion--portfolio {
+                .contenido__portfolio--contenedor {
+                    .contenido__portfolio--articulo{
+                        @include cols-wrp-adj($wth_col: 268px, $min_hgt: 275px, $mrg_col: 0 10px 50px);
+                    }
+
+                    .portfolio__articulo--ciego{
+                        @include ciego-01($cgo_disp: block, $cgo_mgn: 0 10px 0);
+                    }
+                }
+            }
+
+            .contenido__seccion--proyectos {
+                .contenido__proyectos--contenedor {
+                    .contenido__proyectos--articulo {
+                        @include cols-wrp-adj($wth_col: 268px, $hgt_col: auto, $min_hgt: 275px, $mrg_col: 0 10px 50px);
+                    }
+
+                    .proyectos__articulo--ciego{
+                        @include ciego-01($cgo_disp: block, $cgo_mgn: 0 10px 0);
                     }
                 }
             }
@@ -212,6 +343,10 @@
 }
 
 @media only screen and (min-width: map-get($wth_res, "dkp_01")) {
+    .mgn_top{
+        height: 90px;
+    }
+
     #contenedor {
         #cabeza {
 
@@ -252,9 +387,6 @@
 
 
             .contenido__seccion--servicios { 
-                .contenido__seccion--servicios_margentop {
-                    height: 90px;
-                }
 
                 h2 {
                     margin-bottom: 45px;
@@ -265,7 +397,7 @@
                 }
             }
 
-            .contenido__seccion--portfolio {   
+            .contenido__seccion--portfolio {  
                 
                 h2 {
                     margin-bottom: 45px;
@@ -275,6 +407,28 @@
                     margin-bottom: 100px;
                 }
             }
+
+            .contenido__seccion--proyectos {   
+                
+                h2 {
+                    margin-bottom: 45px;
+                }
+    
+                p {
+                    margin-bottom: 100px;
+                }
+            }
+
+            /*.contenido__seccion--presupuesto {  
+                
+                h2 {
+                    margin-bottom: 45px;
+                }
+    
+                p {
+                    margin-bottom: 100px;
+                }
+            }*/
         }
     }
 }
@@ -333,3 +487,4 @@
         }
     }
 }
+

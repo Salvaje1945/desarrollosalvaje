@@ -1,0 +1,27 @@
+@use 'vars' as *;
+@use 'predef' as *;
+
+#contenedor {
+    #pieses{
+        width: 100%;
+        min-width: 375px;
+
+        .pieses__contenedor {
+            @extend .flex-3;
+            box-sizing: border-box;
+            background-color: #212121;
+
+            .pieses__contenedor--cols {
+                @include cols-3-wrp ($cols-3_wth: 93.6vw);
+
+                &:nth-child(2) {
+                    background-color: blueviolet;
+                }
+
+                &:nth-child(3) {
+                    background-color: crimson;
+                }
+            }
+        }
+    }
+}
